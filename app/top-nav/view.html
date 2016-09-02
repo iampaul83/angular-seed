@@ -1,0 +1,28 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button ng-click="isCollapsed = !isCollapsed" type="button" class="navbar-toggle">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" ui-sref="home">Project name</a>
+		</div>
+
+		<!-- 大螢幕 -->
+		<div class="hidden-xs">
+			<ng-include src="'top-nav/nav-menu.html'"></ng-include>
+		</div>
+		<!-- /.hidden-xs -->
+
+		<!-- 小螢幕 -->
+		<div class="visible-xs" uib-collapse="!isCollapsed" ng-click="isCollapsed = !isCollapsed">
+			<ng-include src="'top-nav/nav-menu.html'"></ng-include>
+		</div>
+		<!-- /.visible-xs -->
+
+	</div>
+	<!-- /.container-fluid -->
+</nav>
